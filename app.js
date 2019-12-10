@@ -34,12 +34,10 @@ app.use((req, res, next) => {
   next()
 })
 
-// 設定路由
-// 首頁
-app.get('/', (req, res) => {
-  res.send('hello world')
-})
-
+// 使用路由器
+app.use('/', require('./routes/home'))
+app.use('/users', require('./routes/user'))
+app.use('/todos', require('./routes/todo'))
 app.use('/users', require('./routes/user'))
 
 // start and listen on the Express server
