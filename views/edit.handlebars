@@ -9,23 +9,30 @@
     <div class="form-group row">
       <label for="name" class="col-2 text-right"><span class="text-danger">*</span> 事件 :</label>
       <div class="col-8">
-        <input type="text" placeholder="name" name="name" value="{{{todo.name}}}" class="form-control" maxlength="8"
+        <input type="text" placeholder="name" name="name" value="{{{todo.name}}}" class="form-control" maxlength="12""
           required>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="note" class="col-2 text-right">備註 :</label>
-      <div class="col-8">
-        <textarea type="text" name="note" placeholder="備註" class="form-control" maxlength="15"
-          rows="2">{{{todo.note}}}</textarea>
+    <div class=" form-group row">
+        <label for="dueDate" class="col-2 text-right"><span class="text-danger">*</span> 日期 :</label>
+        <div class="col-8">
+          <input type="date" class="form-control" name="dueDate" id="dueDate" value="{{todo.dueDate}}" maxlength="10"
+            required>
+        </div>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-success">
-          <i class="fa fa-check" aria-hidden="true"></i>
-          Save</button>
-      </div>
+      <div class="form-group row">
+        <label for="note" class="col-2 text-right">備註 :</label>
+        <div class="col-8">
+          <textarea type="text" name="note" placeholder="備註" class="form-control" maxlength="15"
+            rows="2">{{{todo.note}}}</textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Save</button>
+        </div>
 
-      {{!-- <table class="table table-hover">
+        {{!-- <table class="table table-hover">
       <tbody class="pt-5">
         <tr class="table-active">
           <th class="text-right">
