@@ -51,6 +51,21 @@ FACEBOOK_SECRET= //your Client secret
 FACEBOOK_CALLBACK= http://localhost:3000/auth/facebook/callback
 ```
 
+#### 修改 /config/config.json
+
+```
+- 修改 development mode 的設定，加入資料庫的名字與密碼,刪除operatorsAliases
+
+"development": {
+  "username": "root",
+  "password": "password",
+  "database": "todo_sequelize",
+  "host": "127.0.0.1",
+  "dialect": "mysql",
+  "operatorsAliases": false
+}
+```
+
 #### 資料庫設定
 
 ##### 請在 MySQL Workbench 輸入下方指令
