@@ -36,7 +36,7 @@ input[type="checkbox"] {
   font-family: DFKai-sb;
 }
 
-.modal-body {
+.modal-body h4 {
   font-family: fantasy;
 }
 
@@ -53,6 +53,7 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 768px) {
+
   h5,
   p {
     font-size: 0.8rem;
