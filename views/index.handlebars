@@ -38,9 +38,8 @@
       </tr>
     </thead>
 
-
-    {{#each todos}}
     <tbody>
+      {{#each todos}}
       <tr class="item">
         <td>
           <input style="vertical-align: middle;" type="checkbox" name="done" {{#if this.done }} checked{{/if}} disabled>
