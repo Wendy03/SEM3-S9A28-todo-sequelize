@@ -19,7 +19,7 @@
     </form>
   </div>
 
-  <table id="myTable" class="table table-striped table-bordered">
+  <table id="myTable" class="table table-striped table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
         <th class="text-center" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
@@ -38,11 +38,11 @@
       </tr>
     </thead>
 
-    <tbody>
-      {{#each todos}}
+
+    {{#each todos}}
     <tbody>
       <tr class="item">
-        <td class="d-inline-block">
+        <td>
           <input style="vertical-align: middle;" type="checkbox" name="done" {{#if this.done }} checked{{/if}} disabled>
           <p>{{#if this.done }}已完成{{/if}}</p>
         </td>
