@@ -6,7 +6,7 @@ const db = require('../models')
 const User = db.User
 
 const { check, validationResult } = require('express-validator')
-const { registerFormCheck, formCheck } = require('../validatorRule')
+const { registerFormCheck } = require('../validatorRule')
 
 // 登入頁面
 router.get('/login', (req, res) => {
@@ -40,7 +40,8 @@ router.post('/register', registerFormCheck, (req, res) => {
         name,
         email,
         password,
-        password2
+        password2,
+        style: 'login.css'
       })
     } else if (!errors.isEmpty()) {
       for (let i = 0; i < errors.array().length; i++) {
