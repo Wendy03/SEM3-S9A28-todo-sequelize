@@ -6,7 +6,6 @@ Desktop.ini
 node_modules
 *.log
 *.gz
-.env
 
 #vscode
 .vscode
